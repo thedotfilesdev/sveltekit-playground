@@ -1,0 +1,15 @@
+version: '3.6'
+
+services:
+  svelte_postgres:
+    container_name: svelte_postgres
+    image: postgres:10
+    ports:
+      - 5432:5432
+    env_file:
+      - ./.env
+    networks:
+      - mp-network
+
+networks:
+  mp-network:
