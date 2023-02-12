@@ -1,10 +1,10 @@
-import type { Router } from '$lib/trpc/router';
 import { createTRPCClient, type TRPCClientInit } from 'trpc-sveltekit';
+import type { IAppRouter } from './router/_app';
 
-let browserClient: ReturnType<typeof createTRPCClient<Router>>;
+let browserClient: ReturnType<typeof createTRPCClient<IAppRouter>>;
 
 export function trpc(init?: TRPCClientInit) {
-  if (typeof window === 'undefined') return createTRPCClient<Router>({ init });
-  if (!browserClient) browserClient = createTRPCClient<Router>();
+  if (typeof window === 'undefined') return createTRPCClient<IAppRouter>({ init });
+  if (!browserClient) browserClient = createTRPCClient<IAppRouter>();
   return browserClient;
 }

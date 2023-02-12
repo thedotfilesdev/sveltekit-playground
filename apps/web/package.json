@@ -9,7 +9,9 @@
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
     "lint": "prettier --check --ignore-path=../../.prettierignore . && TIMING=1 eslint \"src\"",
-    "format": "prettier --write --ignore-path=../../.prettierignore ."
+    "format": "prettier --write --ignore-path=../../.prettierignore .",
+    "postinstall": "prisma generate",
+    "db:generate": "prisma generate"
   },
   "devDependencies": {
     "@auth/core": "latest",
@@ -22,6 +24,7 @@
     "eslint-config-custom": "*",
     "postcss": "^8.4.20",
     "prisma": "^4.8.1",
+    "superjson": "^1.12.2",
     "svelte": "^3.44.0",
     "svelte-check": "^2.7.1",
     "svelte-preprocess": "^4.10.6",

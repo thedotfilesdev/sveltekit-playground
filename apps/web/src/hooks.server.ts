@@ -4,16 +4,20 @@ import Credentials from '@auth/core/providers/credentials';
 import { PrismaAdapter } from '@next-auth/prisma-adapter';
 import { PrismaClient } from '@prisma/client';
 import { GITHUB_ID, GITHUB_SECRET, AUTH_SECRET } from '$env/static/private';
-import { createContext } from '$lib/trpc/context';
-import { router } from '$lib/trpc/router';
 import type { Handle } from '@sveltejs/kit';
 import { createTRPCHandle } from 'trpc-sveltekit';
 import { sequence } from '@sveltejs/kit/hooks';
+import { appRouter } from '$lib/server/api/root';
+import { createContext } from '$lib/server/api/trpc';
+
+console.log({ GITHUB_ID, GITHUB_SECRET, AUTH_SECRET });
 
 const prisma = new PrismaClient();
 
 export const authHandle = SvelteKitAuth({
   secret: AUTH_SECRET,
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
   adapter: PrismaAdapter(prisma),
   session: {
     strategy: 'jwt'
@@ -39,6 +43,9 @@ export const authHandle = SvelteKitAuth({
   ]
 });
 
-export const trpcHandle: Handle = createTRPCHandle({ router, createContext });
+export const trpcHandle: Handle = createTRPCHandle({
+  router: appRouter,
+  createContext
+});
 
 export const handle = sequence(authHandle, trpcHandle);
