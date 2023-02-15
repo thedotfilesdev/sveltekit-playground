@@ -11,4 +11,3 @@
 <h6>Data loaded in<br /><code>+page.ts</code></h6>
 <p>{data.greeting}</p>
 <button on:click={rerunLoadFunction}>Update random number</button>
-
