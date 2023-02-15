@@ -28,7 +28,7 @@ importers:
       '@trpc/server': ^10.9.0
       autoprefixer: ^10.4.13
       eslint-config-custom: '*'
-      postcss: ^8.4.20
+      postcss: ^8.4.21
       prisma: ^4.8.1
       superjson: ^1.12.2
       svelte: ^3.44.0
@@ -45,11 +45,11 @@ importers:
       trpc-sveltekit: 3.2.9
     devDependencies:
       '@auth/core': 0.4.0
-      '@auth/sveltekit': 0.2.1_mombgr4tqjba7weu533t6lazv4
+      '@auth/sveltekit': 0.2.1_vjmuw4jy4hji6q4s6wxo6clpfq
       '@next-auth/prisma-adapter': 1.0.5_77bhi65b6v5jbrzr36rs2ojwe4
       '@prisma/client': 4.9.0_prisma@4.9.0
-      '@sveltejs/adapter-auto': 2.0.0_@sveltejs+kit@1.5.5
-      '@sveltejs/kit': 1.5.5_svelte@3.55.1+vite@4.1.1
+      '@sveltejs/adapter-auto': 2.0.0_@sveltejs+kit@1.5.6
+      '@sveltejs/kit': 1.5.6_svelte@3.55.1+vite@4.1.1
       autoprefixer: 10.4.13_postcss@8.4.21
       eslint-config-custom: link:../../packages/eslint-config-custom
       postcss: 8.4.21
@@ -114,14 +114,14 @@ packages:
       preact-render-to-string: 5.2.3_preact@10.11.3
     dev: true
 
-  /@auth/sveltekit/0.2.1_mombgr4tqjba7weu533t6lazv4:
+  /@auth/sveltekit/0.2.1_vjmuw4jy4hji6q4s6wxo6clpfq:
     resolution: {integrity: sha512-uC1xxWLCWsd581yMzOAiOhUudsjA/HHYuFXMOnvxB4gRcxQV9bW3t+GcP2NWWah6gU00kMc7r2JsVhGyPNANGQ==}
     peerDependencies:
       '@sveltejs/kit': ^1.0.0
       svelte: ^3.54.0
     dependencies:
       '@auth/core': 0.3.0
-      '@sveltejs/kit': 1.5.5_svelte@3.55.1+vite@4.1.1
+      '@sveltejs/kit': 1.5.6_svelte@3.55.1+vite@4.1.1
       svelte: 3.55.1
     transitivePeerDependencies:
       - nodemailer
@@ -561,17 +561,17 @@ packages:
     requiresBuild: true
     dev: true
 
-  /@sveltejs/adapter-auto/2.0.0_@sveltejs+kit@1.5.5:
+  /@sveltejs/adapter-auto/2.0.0_@sveltejs+kit@1.5.6:
     resolution: {integrity: sha512-b+gkHFZgD771kgV3aO4avHFd7y1zhmMYy9i6xOK7m/rwmwaRO8gnF5zBc0Rgca80B2PMU1bKNxyBTHA14OzUAQ==}
     peerDependencies:
       '@sveltejs/kit': ^1.0.0
     dependencies:
-      '@sveltejs/kit': 1.5.5_svelte@3.55.1+vite@4.1.1
+      '@sveltejs/kit': 1.5.6_svelte@3.55.1+vite@4.1.1
       import-meta-resolve: 2.2.1
     dev: true
 
-  /@sveltejs/kit/1.5.5_svelte@3.55.1+vite@4.1.1:
-    resolution: {integrity: sha512-NJry1mvcIBITVe9WyAGu39Cf33z8wRKzut/Oug4zqMVUpX+i7fG17+GyvLCh9GXdmIkqwSeSMROHDKRODvd6BA==}
+  /@sveltejs/kit/1.5.6_svelte@3.55.1+vite@4.1.1:
+    resolution: {integrity: sha512-CHVeQpbcwSIUekF6WwevmExKXyfHnzM5nlCEUv13lGgfJ0zKA0ny5YwIe40vccrm5w5Caec7jMTt9Ih3McJr5g==}
     engines: {node: ^16.14 || >=18}
     hasBin: true
     requiresBuild: true

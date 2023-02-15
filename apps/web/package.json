@@ -22,7 +22,7 @@
     "@sveltejs/kit": "latest",
     "autoprefixer": "^10.4.13",
     "eslint-config-custom": "*",
-    "postcss": "^8.4.20",
+    "postcss": "^8.4.21",
     "prisma": "^4.8.1",
     "superjson": "^1.12.2",
     "svelte": "^3.44.0",
